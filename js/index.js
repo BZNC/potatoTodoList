@@ -50,7 +50,7 @@ $(function () {
     }
 
     // 4 添加todo的方法
-    $('#title').on("keyup", function (event) {
+    $('#title').on("keydown", function (event) {
         if (event.keyCode === 13) {
             console.log($(this))
             if ($(this).val() !== "") {
