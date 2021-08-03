@@ -50,12 +50,12 @@ $(function () {
     }
 
     // 4 添加todo的方法
-    $("#title").on("keydown", function (event) {
+   $("#title").on("keyup", function (event) {
         if (event.keyCode === 13) {
             if ($(this).val() === "") {
-                alert("请输入您要的操作");
+                alert("请输入todo内容");
             } else {
-                var local = readData();
+                let local = readData();
                 local.push({ title: $(this).val(), done: false });
                 writeData(local);
                 load();
