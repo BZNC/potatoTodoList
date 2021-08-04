@@ -50,20 +50,21 @@ $(function () {
     }
 
     // 4 添加todo的方法
-   $("#title").on("keyup", function (event) {
+    $("#title").on("keyup", function (event) {
         if (event.keyCode === 13) {
-            if ($(this).val() === "") {
-                alert("请输入todo内容");
+            let inputVal = $.trim($(this).val())
+            if (inputVal === "") {
+                alert("请输入todo内容")
+                $(this).val("")
             } else {
-                let local = readData();
-                local.push({ title: $(this).val(), done: false });
-                writeData(local);
-                load();
-                $(this).val("");
+                var local = readData();
+                local.push({ title: inputVal, done: false })
+                writeData(local)
+                load()
+                $(this).val("")
             }
         }
     });
-
     //5 删除list的方法
     $("ul,ol").on("click", "a", function () {
         console.log($(this))
