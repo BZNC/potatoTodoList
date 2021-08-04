@@ -12,10 +12,13 @@
 使用公共cdn，提高稳定性
 
 已知BUG：
- - 1.按一次回车会识别为两次，此情况仅出现在github.io的预览页面上。
+ - 1.已解决，在html最下方多引入了一个script标签，删除即可
+     ~~按一次回车会识别为两次，此情况仅出现在github.io的预览页面上。
      本地调试中没有出现，正在想办法解决。
-     如果你知道该怎么解决，请提交一个issue与我联系，谢谢。
- - 2.直接上传jQuery文件会报错，不能执行jQuery。
-     更换为cdn提供后正常。
+     如果你知道该怎么解决，请提交一个issue与我联系，谢谢。~~
+     
+ - 2.已解决，更换为cdn提供后正常。
+     ~~直接上传jQuery文件会报错，不能执行jQuery。~~
+     
 
-项目预览地址：`https://bznc.github.io/potatoTodoList/index.html`
+项目预览地址：[点我访问](https://bznc.github.io/potatoTodoList/index.html)
